@@ -1,0 +1,50 @@
+
+*{
+    text-decoration: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+ul li{
+    float: left;
+}
+ul li a{
+    background-color:bisque;
+    width: 100px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    margin-right: 10px;   
+}
+ul ul li{
+    float: none;
+    position: relative;
+}
+ul ul ul  {
+    position: absolute;
+    left: 100px;
+    top: 0;   
+} 
+.ul-5{
+    position: absolute;
+   left: -100px;
+    top: 0;
+}
+ul ul li a{
+    background-color:burlywood;
+    color: black;
+}
+ul ul {
+    display:none;
+    border-width: 0px 1px 1px;
+    border-style: ridge;
+    border-color: whitesmoke;
+}
+ul li:hover > ul{
+    display: block;
+}
+ul  li a:hover{
+    color: orange;
+}
