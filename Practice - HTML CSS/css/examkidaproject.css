@@ -13,6 +13,7 @@
 .w-1140{
     width: 1140px;
     margin: auto;
+    margin-top: 30px;
 }
 .header{
     height: 70px;
@@ -25,8 +26,13 @@
 .flex{
     display: flex;
     justify-content:flex-start;
-   justify-content: center
+    justify-content: center;
 }
+.login{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .box{
     box-sizing: border-box;
     width: 50%;
@@ -110,13 +116,13 @@
   text-transform: capitalize;
 }
 .buttons{
-    width: 120px;
-    height: 35px; 
-    background-color:#2f3248; 
+    width: 105px;
+    height: 32.5px; 
+    background-color:#454FA2;
     color: white;
     border-radius: 7px;
     box-sizing: border-box;
-    border-width: 1px;
+    border-width: 0.5px;
     text-transform:uppercase;
 }
 .box-img{
@@ -157,6 +163,27 @@
     padding: 5px;
 
 }
+.icon-box{
+    display: flex;
+    justify-content: flex-start;
+}
+.icon{
+    display: flex;
+    border-radius: 20px;
+    background-color:#454FA2;
+    margin-right: 10px;
+    width: 90%;
+    height:32px;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    width: ;
+}
+
+
+
+
 
 
 
