@@ -131,7 +131,7 @@
 
 
 /* position propertys */
-.parent{
+/* .parent{
 
     width: 500px;
     height: 500px;
@@ -149,4 +149,26 @@
     left: 0;
     top: 200px;
     left: 550px;
+} */
+
+/* transform propertys */
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    transition: 2s;
+}
+.box:hover{
+    transform: scaleX(1) ;
+    transform: scaleX(1.2);
+    transform:scaleY(0.5);
+    transform: rotateX(90deg);
+    transform: rotateY(120deg);
+    transform: rotate(360deg) scale(0.5);
+    transform: skewX(20deg);
+    transform: skewY(50deg);
+    transform: skew(30deg, 20deg);
+    transform: translateX(50px);
+    transform: translateY(50px);
+    transform: translate(30px 30px);
 }
