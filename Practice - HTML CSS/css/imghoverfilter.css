@@ -1,0 +1,132 @@
+.h2{
+    font-weight: 300px;
+    margin-bottom: 30px;
+}
+.column{
+    width:100%;
+    height: 200px;
+    /* background-color: green; */
+    margin-bottom: 100px;
+
+}
+.column div {
+    float: left;
+    display: block;
+    margin-left: 20px; 
+    width: 20%;
+    overflow: hidden;
+
+}
+img {
+    width: 100%;   
+    display: block;
+}
+.hover1{
+    width: 300px;
+    height: 200px;
+}
+.hover1 img{
+    transform: scale(1);
+    transition: 2s;
+}
+.hover1:hover img{
+    transform: scale(1.3);
+    
+}
+.hover2  div img{
+    width: 300px;
+    height: auto;
+    transition: 2s;
+}
+.hover2 div:hover img{
+    width: 350px;
+    transform: scaleX(20px);
+}
+.hover3 div img{
+    transform: scale(1.5);
+    transition: .3s;
+}
+.hover3 div:hover img{
+    transform: scale(1);
+}
+.hover4  div img{
+    width: 400px;
+    height: auto;
+    transition: 2s;
+}
+.hover4 div:hover img{
+    width: 300px;
+}
+.hover5  div img{
+    margin-left: 30px;
+    transition: .3s;
+}
+.hover5 div:hover img{
+    margin-left: 0;
+}
+.hover6 div img{
+    transform: rotate(15deg) scale(1.4);
+    transition: .3s;
+}
+.hover6 div:hover img{
+    transform: rotate(0) scale(1);
+}
+.hover7 div img{
+    filter: blur(3px);
+    transition: .3s;
+}
+.hover7 div:hover img{
+    filter: blur(0);
+}
+.hover8 div img{
+    filter: grayscale(100%);
+    transition: .4s;
+}
+.hover8 div:hover img{
+    filter: grayscale(0);
+}
+.hover9 div img{
+    filter: sepia(100%);
+    transition: .3s;
+}
+.hover9 div:hover img{
+    filter: sepia(0);
+}
+.hover10 div img{
+    filter:  blur(0)grayscale(0);
+    transition: .3s;
+}
+.hover10 div:hover img{
+    filter: grayscale(100%) blur(3px);
+}
+.hover11 div img{
+    opacity: 1;
+    transition: .3s;
+}
+.hover11 div:hover img{
+    opacity: .5;
+}
+.hover12 div {
+    background-color:#1abc9c;
+}
+.hover12 div img{
+    opacity: 1;
+    transition: .3s;
+}
+.hover12 div:hover img{
+    opacity: .5;
+}
+.hover13 div img{
+    filter: brightness(1);
+    transition: .3s;
+}
+.hover13 div:hover img{
+    filter: brightness(.1);
+}
+.hover14 div img{
+    filter: contrast(.5);
+    transition: 2s;
+}
+.hover14 div:hover img{
+    filter: contrast(2);
+}

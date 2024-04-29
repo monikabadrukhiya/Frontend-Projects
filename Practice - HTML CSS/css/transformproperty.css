@@ -1,0 +1,66 @@
+.container{
+    margin: 100px;
+/* background-color: yellowgreen;    */
+}
+.box{
+ width: 80px;
+ height: 80px;
+ margin: 20px;
+ border-radius: 20px;
+ background-color: green;
+ display: inline-block;
+
+ 
+}
+.container:hover .box{
+    transform: scale(1.4);
+   } 
+
+.box1{
+ transition:all 1.3s;
+}
+.box2{
+    transition: all 1.3s 0.5s;
+}
+.box3{
+transition: all  1.3s 1s;
+}
+
+.droplet{
+    width: 150px;
+    height: 150px;
+    background-color:blueviolet;
+    border-radius: 2% 50%;
+    margin: 100px;
+    transition: 4s;
+}
+.droplet:hover{
+    /* transform: rotate(1080deg); */
+    transform: rotate(500deg);
+}
+.square1{
+    width: 150px;
+    height: 150px;
+    background-color: darkslateblue;
+    border-radius: 3px;
+    margin: 50px;
+    position: absolute;
+    transition: transform .8s;
+
+
+}
+.square2{
+    width: 150px;
+    height: 150px;
+    background-color:darkcyan;
+    border-radius: 3px;
+    margin: 50px;
+    position: absolute;
+    transition: transform .8s;
+
+    &:hover{
+    transform: translate(20px, 20px);
+    }
+}
+
+

@@ -23,9 +23,15 @@ ul li a:hover{
     color:darkgoldenrod
 }
 .boximg:hover {
-    transform:scale(0.8);
+    transform:scale(0.9);
     /* transform:translateX(20px); */
+    transform: all 1.3s;
 }
+.body img:hover{
+    transform: rotateY(60deg) scale(1);
+    transform: all 1.3s 0.5s;
+}
+
 
 .header{
     height: 70px;

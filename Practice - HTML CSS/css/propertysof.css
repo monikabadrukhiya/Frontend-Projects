@@ -159,16 +159,32 @@
     transition: 2s;
 }
 .box:hover{
-    transform: scaleX(1) ;
-    transform: scaleX(1.2);
-    transform:scaleY(0.5);
-    transform: rotateX(90deg);
-    transform: rotateY(120deg);
-    transform: rotate(360deg) scale(0.5);
-    transform: skewX(20deg);
-    transform: skewY(50deg);
-    transform: skew(30deg, 20deg);
-    transform: translateX(50px);
-    transform: translateY(50px);
-    transform: translate(30px 30px);
+    /* // cube srink thai x & y par */
+    transform: scaleX(.5) ;
+    /* transform: scaleY(1.2); */
+    /* transform:scale(0.5); */
+    /* //rotates thai  */
+    /* transform: rotateX(90deg); */
+    /* transform: rotateY(120deg); */
+    /* transform: rotate(360deg) scale(0.5); */
+    /* //Square cross thai */
+    /* transform: skewX(20deg); */
+    /* transform: skewY(50deg); */
+    /* transform: skew(30deg, 20deg); */
+    /* //x and y axes upper uo down thai */
+    /* transform: translateX(50px); */
+    /* transform: translateY(50px); */
+    /* transform: translate(30px,30px); */
+}
+.image:hover{
+    /* // normal value 0px */
+    filter: blur(1px); 
+    filter: brightness(1);
+    filter: contrast(1);
+    /* //grayscale 100%  aave 0 is normal */
+    filter: grayscale(0);
+    filter: sepia(0);
+    filter: opacity(1);
+    filter: opacity(50%);
+
 }
