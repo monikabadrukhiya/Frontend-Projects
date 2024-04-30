@@ -156,11 +156,10 @@
     width: 200px;
     height: 200px;
     background-color: blueviolet;
-    transition: 2s;
 }
 .box:hover{
     /* // cube srink thai x & y par */
-    transform: scaleX(.5) ;
+    transform: scaleX(1);
     /* transform: scaleY(1.2); */
     /* transform:scale(0.5); */
     /* //rotates thai  */

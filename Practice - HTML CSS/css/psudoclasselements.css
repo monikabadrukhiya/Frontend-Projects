@@ -1,0 +1,65 @@
+a:active{
+    color: green;
+}
+a:link{
+    color: red;
+}
+a:visited{
+    color: yellow;
+}
+/* p:first-child{
+    color:darkblue;
+} */
+/* p:first-of-type{
+    color: blueviolet;
+} */
+/* p:last-child{
+    color: red;
+} */
+
+/* p:last-of-type{
+    color: chartreuse;
+} */
+/* p:nth-child(odd/even/number){
+    color: brown;
+} */
+/* p:nth-of-type(4)
+{
+    font-style: italic; 
+    color: violet;
+}  */
+/* p:nth-last-child(odd){
+    color: chocolate;
+} */
+
+/* p:nth-last-of-type(even){
+    color: crimson;
+} */
+
+/* p:only-child{
+    color:red;
+} */
+/* p:only-of-type{
+    color: darkgoldenrod;
+} */
+/* :not(p){
+    color:darkgreen;
+} */
+/* :empty{
+background-color: red;
+    height: 20px;
+    width: 100px;
+} */
+/* input:enabled{
+    color: red;
+    cursor: pointer;
+    font-style: italic;
+} */
+
+/* input:disabled{
+    color: blue;
+} */
+
+/* input:focus{
+    color: brown;
+} */
