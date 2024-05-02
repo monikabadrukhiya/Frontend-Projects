@@ -7,6 +7,9 @@ a:link{
 a:visited{
     color: yellow;
 }
+*{
+    color: red;
+}
 /* p:first-child{
     color:darkblue;
 } */
@@ -33,7 +36,7 @@ a:visited{
 } */
 
 /* p:nth-last-of-type(even){
-    color: crimson;
+    color:darkkhaki;
 } */
 
 /* p:only-child{
@@ -42,7 +45,7 @@ a:visited{
 /* p:only-of-type{
     color: darkgoldenrod;
 } */
-/* :not(p){
+/* :not(h1){
     color:darkgreen;
 } */
 /* :empty{
@@ -63,3 +66,18 @@ background-color: red;
 /* input:focus{
     color: brown;
 } */
+
+
+input:enabled{
+    border: 2px solid red;
+}
+input:disabled{
+    background-color: green;
+}
+input:in-range{
+   background-color: red;
+}
+
+input:focus{
+    background-color: yellow;
+}

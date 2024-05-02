@@ -1,0 +1,245 @@
+ .main{
+    background-color: whitesmoke;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+} 
+.bounce{
+    text-align: center;
+    animation-name: BounceIn;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    font-size: 40px;
+    position: absolute;
+    margin: 50px;
+    color:yellowgreen;
+
+}
+@keyframes BounceIn {
+    0%{
+        transform: scale(.1);
+        opacity: 0;
+    }
+    50%{
+        transform: rotate(90deg) scale(1.2);
+        opacity: 1;
+    }
+    100%{
+        transform:scale(1) ;
+        /* opacity: 1; */
+    }
+}
+.main2{
+    width: 400px;
+    height: 300px;
+    background-color:darkseagreen;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.circle1{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 10px;
+    background-color: red;
+    border-radius: 50px;
+    animation-name: circle;
+    animation-timing-function:ease-in;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes circle {
+    0%{
+        transform: translateY(250px) scaleX(2);
+
+    }
+    100%{
+        transform: translateY(-2px);
+    }
+    
+}
+.circle2{
+    height: 30px;
+    width: 30px;
+    margin: 20px;
+    left: 40px;
+    position: absolute;
+    background-color:green;
+    border-radius: 50px;
+    animation-name: circle;
+    animation-timing-function:linear;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+.circle3{
+    height: 30px;
+    width: 30px;
+    left: 100px;
+    position: absolute;
+    background-color:blue;
+    border-radius: 50px;
+    animation-name: circle;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-duration: 2s;
+}
+.circle4{
+    height: 30px;
+    width: 30px;
+   left: 150px;
+    position: absolute;
+    background-color:palevioletred;
+    border-radius: 50px;
+    animation-name: circle;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 3s;
+}
+.circle5{
+    height: 30px;
+    width: 30px;
+    left: 200px;
+    position: absolute;
+    background-color:blueviolet;
+    border-radius: 50px;
+    animation-name: circle;
+    animation-timing-function:ease;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-duration:4s;
+}
+.circle6{
+    height: 30px;
+    width: 30px;
+    left: 250px;
+    position: absolute;
+    background-color:slateblue;
+    border-radius: 50px;
+    animation-name: circle;
+    animation-timing-function: ease-in-out;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+.main3{
+    width: 30%;
+    height: 300px;
+    background-color: aliceblue;
+    margin-bottom: 150px;
+}
+.img1{
+    width: 100%;
+    animation-duration: 3s;
+    animation-name: clock;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    overflow: hidden;
+}
+.img1:hover{
+    animation-play-state: paused;
+}
+@keyframes clock {
+    0%{
+        transform: rotate(360deg) scaleY(.5);
+    }
+}
+
+.main4{
+    width: 50%;
+    height: 400px;
+    /* background-color: skyblue; */
+    position: relative;
+    display: block;
+}
+.img2{
+    width: 70%;
+    position: absolute;
+    top: 150px;
+}
+.img3{
+    width: 20%;
+    top: 50px;
+    position: absolute;
+    animation-name: img3;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+.img4{
+    width: 20%;
+    left: 450px;
+    top: 120px;
+    position: absolute;
+    animation-name: img4;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+.img5{
+    width: 20%;
+    top: 150px;
+    left: 400px;
+    position: absolute;
+    animation-name: img4;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+.sun{
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    position: absolute;
+    background-color: orange;
+    left: 200px;
+    animation-name:sun;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes sun {
+    0%{
+        transform: translateY(200px);
+        background-color:orangered;
+    }
+    50%{
+        background-color: orange;
+    }
+    100%{
+        background-color:white;
+    }
+    
+}
+@keyframes img3 {
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(500px);
+    }
+    
+}
+@keyframes  img4{
+    0%{
+        transform: translateX(50px);
+    }   
+    100%{
+        transform: translateX(-500px);
+    }
+}
