@@ -243,3 +243,18 @@
         transform: translateX(-500px);
     }
 }
+.main5{
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+    position: relative;
+    display: block;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    position: absolute;
+    display: inline-block;
+    border: 1px solid currentColor;
+}
