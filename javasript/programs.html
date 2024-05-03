@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program</title>
+</head>
+<body>
+    <script>
+
+        document.write("pattern 1");
+        document.write("<br>");
+        document.write("pattern 2");
+        document.write("<br>");
+        document.write("pattern 3");
+        document.write("<br>");
+        document.write("pattern 4");
+        document.write("<br>");
+        document.write("pattern 5");
+        document.write("<br>");
+        document.write(" if condition");
+        document.write("<br>");
+        document.write("if & else condition");
+        document.write("<br>");
+        document.write(" pattern 8");
+        document.write("<br>");
+        var choice=parseFloat(prompt("Enter your choice"));
+        switch(choice){
+            case 1:{
+                var p=1;
+                for(i=1;i<=4;i++)
+                {
+                    for(j=1;j<=i;j++)
+                    {
+                        document.write(p);
+                        p++;
+                    }
+                    document.write("<br>");
+                }
+                document.write("<br>");
+                }
+                break;
+                case 2:{
+                    for(i=1;i<=5;i++)
+                    {
+                        for(j=1;j<=6-i;j++)
+                        {
+                            document.write(j);
+                        }
+                        document.write("<br>");
+                    }
+                }
+                break;
+                case 3:{
+                    for(i=1;i<=5;i++)
+                    {
+                        for(p=1;p<=5-i;p++)
+                        {
+                            document.write("_") ;
+                        }
+                        for(j=1;j<=2*i-1;j++)
+                        {
+                            document.write(j);
+                        }
+                        document.write("<br>");
+                    }
+                }
+                break;
+                case 4:{
+                    for(i=1;i<=5;i++)
+                        {
+                            for(j=1;j<=5;j++)
+                            {
+                                if(i==1|| i==5)
+                                {
+                                    document.write("*");
+                                }
+                                else{
+                                    if(j==1 || j==5)
+                                {
+                                    document.write("*");
+                                }
+                                else{
+                                    document.write("_");
+                                }
+                                }   
+                            }
+                            document.write("<br>");
+                        }
+                }
+                break;
+                case 5:{
+                    for(i=1;i<=5;i++)
+                        {
+                            for(j=6-i;j>=1;j--)
+                            {
+                                document.write(j);
+                            }
+                            document.write("<br>");
+                        }
+                }
+                break;
+                case 6:{
+                var a=20;
+                        var b=30;
+                        if(a<b)
+                        {
+                            var c=a+b;
+                        }
+                        document.write(c);
+                }
+                break;
+                case 7:{
+                    var a=20;
+                     var b=30;
+                    if(a==b)
+                    {
+                        console.log("hello");
+                    }
+                    else{
+                        console.log("good bye");
+                    }
+                }
+                break;
+                case 8:{
+                    for(i=1;i<=5;i++)
+                    {
+                        for(j=i;j<=5;j++)
+                        {
+                            document.write(j);
+                            
+                        }
+                        document.write("<br>");
+                    }
+                    document.write("<br>");
+                }
+                break;
+               
+        }
+   
+// document.write("1 to 10 digit");
+//         var i=1;
+//         while(i<=10)
+//         {
+//         document.write(i);
+//             i++;
+//         document.write("<br>");
+//         }
+
+//         document.write("<br>");
+
+
+// document.write("1 to 10 digit sum")
+//    var i=0
+//    var sum=0;
+//    while(i<=10)
+//    {
+//     sum=sum+i;
+//     i++;
+//    }
+//    document.write("<br>");
+//    document.write(sum);
+
+
+//    document.write("<br>");
+//    document.write("table");
+//    document.write("<br>");
+//    var  i=1;
+//    const n= parseInt(prompt("Enter Number="));
+//    while(i<=10)
+//    {
+//     document.write(n + " * " + i + " = " + n * i);
+//     i++;
+//    }
+//    document.write("<br>");
+//    document.write("<br>");
+
+//    document.write("factorial");
+//    document.write("<br>");
+//    var i=1,fact=1;
+//    var m=parseInt(prompt("Enter n="));
+//    while(i<=m)
+//    {
+//     var fact=fact*i
+//     i++;
+//    }
+//    document.write(fact);
+
+//    document.write("<br>");   
+// document.write("value odd or even");
+// document.write("<br>");   
+
+//    var n=parseInt(prompt("Enter n="))
+//    if(n%2==0)
+//    {
+//     document.write("value is even");
+//    }
+//    else
+//    {
+//     document.write("value is odd");
+//    }
+        
+
+// document.write("<br>");
+// document.write("indivisiul digit sum");
+// document.write("<br>");
+//     var n=parseInt(prompt("Enter n="));
+//     var sum=0,rem;
+    // do{
+    //     rem=n%10;
+    //     sum=sum+rem;
+    //     n=n/10;
+    // }
+    // while(n!=0)
+    // document.write(sum);
+
+//     document.write("<br>");
+// document.write("reverse digit");
+// document.write("<br>");
+//     var n=parseInt(prompt("Enter num="));
+//     var sum=0,rem;
+//     do{
+//         rem=n%10;
+//         sum=sum*10+rem;
+//         n= parseInt(n/10);
+//     }
+//     while(n!=0)
+//     console.log(sum);
+
+    // document.write("<br>");
+    // document.write("pelidrome no");
+    // document.write("<br>");
+   
+//     var a=n;
+//     do{
+//         rem=n%10;
+//         sum=sum*10+rem;
+//         n= parseInt (n/10);
+//     }
+//     while(n!=0)
+//     document.write("sum="+sum);
+//     document.write("<br>");
+// if(sum==a){
+//     document.write("its pelidrome");
+// }
+// else{
+//     document.write("its not pelidrome");
+// }
+// var n=parseInt(prompt("Enter num="));
+//     var i=1,rem,sum;
+//    do{
+//         var a=i;
+//         sum=0;
+//         while(a!=0)
+//         {
+//             rem=a%10;
+//         sum=sum*10+rem;
+//         n=parseInt(a/10);
+//         }
+//         if(sum==i)
+//         {
+//             document.write(i);
+//         }  
+//         i++; 
+//    }
+//    while(i<=n);
+
+//   document.write("<br>");
+//   document.write("armstrong no");
+//   document.write("<br>");
+//   var i=1,rem;
+//   var n=parseInt(prompt("Enter n="));
+//     do{
+//         a=i;
+//         sum=0;
+//         while(a!=0)
+//         {
+//             rem=a%10;
+//             sum=sum+(rem*rem*rem);
+//             a=parseInt(a/10);
+//         }
+//         if(sum==i)
+//         {
+//             console.log(i);
+//         }
+//         i++;
+//     }
+//     while(i<=n)
+
+
+//   do
+//   {
+//     rem=n%10;
+//     sum=sum+(rem*rem*rem);
+//     n=parseInt(n/10);
+//   }
+//   while(n!=0)
+//   document.write(sum);
+//   if(sum==i)
+//   {
+//     document.write("its armstrong");
+//   }
+//   else{
+//     document.write("its not armstrong");
+//   }
+
+
+//   document.write("<br>");
+//   document.write("spy no");
+//   document.write("<br>");
+//     var sum,rem,multi=1 , i;
+//     var n=parseInt(prompt("Enter n="));
+    // for(;n!=0;)
+    // {
+    //     rem=n%10;
+    //     sum=sum+rem;
+    //     multi=rem*multi;
+    //     n=parseInt(n/10);
+    // }
+    // if(sum==multi)
+    // {
+    //     document.write("its spy no");
+    // }
+    // else
+    // {
+    //     document.write("its not spy");
+    // }
+
+    // for(i=1;i<=n;i++)
+    // {
+    //     a=i;
+    //     sum=0;multi=1;
+    //     while(a!=0)
+    //     {
+    //         rem=a%10;
+    //         sum=sum+rem;
+    //         multi=multi*rem;
+    //         a=parseInt(a/10);
+    //     }
+    //     if(sum==multi)
+    //     {
+    //         console.log(i);
+    //     }
+    // }
+
+    // document.write("<br>");
+    // document.write("neon no");
+    // document.write("<br>");
+    // var neon=n*n;
+    //     var sum=0;
+    // for( ;neon!=0;)
+    // {
+    //     rem=neon%10;
+    //     sum=sum+neon;
+    //     neon=parseInt(neon/10);
+    // }
+    // if(sum==n)
+    // {
+    //     document.write("its neon");
+    // }
+    // else
+    // {
+    //     document.write("its not neon");
+    // }
+    // var n=parseInt(prompt("Enter n="));
+    // var i,sum,neon,rem;
+    // for(i=1;i<=n;i++)
+    // {
+    //     sum=0;
+    //     neon=i*i;
+    //     for(;neon!=0;)
+    //     {
+    //         rem=neon%10;
+    //         sum=sum+rem;
+    //         neon=parseInt(neon/10);
+    //     }
+    //     if(sum==i)
+    //     {
+    //         console.log(a);
+    //     }
+    // }
+    </script>
+</body>
+</html>
