@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <script>
+        // calculator in Function
+
+        function cal(a,sign,b)
+        {
+            if(sign=='+')
+            {
+                result=a+b
+                //  document.write("sum="+ sum +'<br>')
+                // console.log("sum=",sum);
+                    return result;
+            }
+            else if(sign=='-')
+            {
+                result=a-b
+                // document.write("minus="+ minus +'<br>')
+                // console.log("minus=",minus);
+                    return result;
+                
+            }
+            else if(sign=='*')
+            {
+                result=a*b
+                // document.write("multi="+ multi +'<br>')
+                // console.log("multi",multi);
+                return result;
+            }
+            else if(sign=='/')
+            {
+                result=a/b
+                // document.write("division="+ division +'<br>')
+                // console.log("div=",division);
+                    return result;
+            }
+            else{
+                console.log("go back");
+            }
+        }
+        cal(parseInt(prompt('a=')),prompt('+,-.*,/'),parseInt(prompt('b=')))
+        let results=console.log( "result=",result);
+
+            // let num1=parseInt(prompt('num1='))
+            // let sign=prompt('+,-,*,/,%')
+            // let num2=(parseInt(prompt('num2=')))
+            // if(sign=='+')
+            // {
+            //    const sum=num1+num2
+            //     console.log("sum=",sum)
+            // }
+            // else if(sign=='-')
+            // {
+            //     const minus=num1-num2
+            //     console.log("minus=",minus)
+            // }
+            // else if(sign=='*')
+            // {
+            //     const multi=num1*num2
+            //     console.log("multi=",multi)
+            // }
+            // else if(sign=='/') {
+            //     const div=num1/num2
+            //     console.log("div=",div)
+            // } 
+            //  else if(sign=='%') {
+            //     const modual=num1%num2
+            //     console.log("div=",modual)
+            // }
+            // else{
+            //     console.log("check the sign")
+            // }
+
+    </script>
+</body>
+</html>
