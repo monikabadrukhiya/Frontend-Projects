@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stringfun</title>
+</head>
+<body>
+    <script>
+        let name="   Monika Khushal Badrukhiya   panvi Khushal Badrukhiya"
+        let name1="panvi Khushal Badrukhiya"
+        let name2="khushal"
+        console.log(name.length);
+        console.log(name.charAt(10));
+        console.log(name.charCodeAt(6));
+        console.log(name.at(1));
+        console.log(name[0]);
+        console.log(name.slice(7,20));
+        console.log(name.slice(7));
+        console.log(name.substring(8,12));
+        console.log(name.substr(1,7));
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase());
+        console.log(name.concat(" _",name1));
+        console.log(name.trim());
+        console.log(name.trimStart());
+        console.log(name.trimEnd());
+       // console.log(name.padStart(4));
+       // console.log(name.padEnd(4));
+       console.log(name.repeat(2));
+       console.log(name.replace("Monika","Panvi"));
+     console.log(name.replaceAll("Khushal","k."));
+     console.log(name.includes("K"));
+      console.log(name.startsWith("M"));
+     console.log(name.endsWith("M"));
+     console.log(name1.indexOf("B"));
+   c // console.log(name.reverse());
+     const text=name2.split("");
+     let myarr="";
+     for(var i=0;i<=text.length;i++)
+     {
+        myarr=text[i];
+        console.log(myarr);
+     }
+
+
+    </script>
+</body>
+</html>

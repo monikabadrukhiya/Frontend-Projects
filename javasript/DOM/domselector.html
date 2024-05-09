@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domselector</title>
+    <style>
+        .title{
+            font-size: 50px;
+            background-color: aqua;
+            color: blue;
+        }
+        #text{
+            font-weight: bold;
+            font-style: italic;
+            font-size: 50px;
+            color: orangered;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" class="titletag dome test">Hello</h1>
+    <div>  
+        <div>
+            <p id="text" class="text1">Welcomt To Surat</p>
+        </div>
+        <div>
+            <p class=" test">Good Morning</p>
+        </div>
+        <ul>
+            <li class="demo test">surat</li>
+            <li class="demo">ahemdabad</li>
+            <li class="test">rajkot</li>
+        </ul>
+    </div>
+    <script>
+        // document.write("testing");
+        // console.log(document) //full html file console ma male
+         document.getElementsByTagName("p")[0].innerText="<p> Welcome to <b>creative</b></p>"
+        // document.getElementsByTagName("p")[0].innerHTML="<p>welcome to <b>creative</b></p>"
+        // document.getElementsByTagName("p")[0].style.color="blue";
+        console.log(  document.getElementsByTagName("p")[0].innerText )
+
+        // console.log(document.getElementsByClassName("test"));
+        // document.getElementsByClassName("test")[2].innerHTML="daman";
+        // document.getElementsByClassName("test")[1].style.color="red";
+        // document.getElementsByClassName("test")[1].style.fontSize="50px"
+        //font-size -ni jagta - pasi no 1st letter camelcase ma lakvo means capital
+
+        //  document.getElementById("title").classList.add("title")
+        //  document.getElementById("text")
+        // document.getElementById("title").classList.remove("titletag")
+        // document.getElementById("title").classList.contains ("titletag")
+        // console.log( document.getElementById("title").classList.contains ("title"))
+
+    </script>
+</body>
+</html>

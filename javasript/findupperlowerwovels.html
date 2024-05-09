@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upperlowerwovelscount</title>
+</head>
+<body>
+    <script>
+    //     function coutchar(str)
+    //     {
+    //         document.write(str);
+    //         let newstr=str.split("");
+    //         let upper=0;
+    //         let lower=0;
+    //         let vowels=0
+    //         for(let i=0;i<newstr.length;i++)
+    //         {
+    //             if(newstr[i]>='A' && newstr[i]<='Z')
+    //             {
+    //               upper++;
+    //             }
+    //             else if(newstr[i]>='a' && newstr[i]<='a')
+    //             {
+    //                 lower++;
+    //             }
+    //             else if(newstr[i]=='A'|| newstr[i]=='a'||newstr[i]=='E'||newstr[i]=='e'||newstr[i]=='I'|| newstr[i]=='i'|| newstr[i]=='O'|| newstr[i]=='o'||newstr[i]=="U"||newstr[i]=='u')
+    //             {
+    //                 vowels ++;
+    //             }
+    //         }
+    //         return{
+    //             upper,
+    //             lower,
+    //             vowels,
+    //         }               
+    //     }
+    // var st = coutchar(prompt("Enter string="));
+    // console.log("====>",st)
+
+
+    function coutchar(str)
+    {
+        let vowelschar="AIOUEaeoui"
+        let upper=0;
+          let lower=0;
+          let vowels=0
+          for (let i = 0; i < str.length; i++)
+           {
+            const el = str[i];
+            if(el==el.toUpperCase())
+            {
+                upper++;
+            }
+            else if(el==el.toLowerCase())
+            {
+                lower++;
+            }
+            if(vowelschar.includes(el))
+            {
+                vowels++;
+            }   
+          }
+        return{
+            upper,
+            lower,
+            vowels,
+        }
+    }
+    console.log(coutchar(prompt("Enter string=")));
+
+
+
+    
+    </script>
+</body>
+</html>

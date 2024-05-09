@@ -7,10 +7,94 @@
 </head>
 <body>
         <script>
-            function result()
+            function result( n)
             {
+                for(var i=1;i<=n;i++)
+                {
+                const s1=parseInt(prompt("s1="));
+                console.log( "maths=",s1)
+                const s2=parseInt(prompt("s2="));
+                console.log( "English=",s2)
+                const s3=parseInt(prompt("s3="));
+                console.log( "Hindi=", s3)
+                const s4=parseInt(prompt("s4="));
+                console.log( "s.s=",s4)
+                const s5=parseInt(prompt("s5="));
+                console.log( "Gujrati=", s5)
 
+                if(s1>s2 && s1>s3 && s1>s4 && s1>s5)
+                {
+                    console.log("s1 is max=",s1)
+                }
+                else if(s2>s1 && s2>s3 && s2>s4 && s2>s5)
+                {
+                    console.log("s2 is max=",s2);
+                }
+                else if(s3>s1 && s3>s2 && s3>s4 && s3>s5)
+                {
+                    console.log("s3 is max=",s3)
+                }
+                else if(s4>s1 && s4>s2 && s4>s3 && s4>s5)
+                {
+                    console.log("s4 is max=",s4)
+                }
+                else if(s5>s1 && s5>s2 && s5>s3 && s5>s4)
+                {
+                    console.log("s5 is max=",s5)
+                }
+
+                if(s1<s2 && s1<s3 && s1<s4 && s1<s5)
+                {
+                    console.log("s1 is min=",s1)
+                }
+                else if( s2<s1 &&s2<s3 && s2<s4 && s2<s5)
+                {
+                    console.log("s2 is min=",s2)
+
+                }
+                else if(s3<s1&&s3<s1&& s3<s4 && s3<s5)
+                {
+                    console.log("s3 is min=",s3)
+                }
+                else if(s4<s1 && s4<s2 && s4<s3 &&s4>s5)
+                {
+                    console.log("s4 is min=",s4)
+                }
+                else if(s5<s1 && s5<s2 && s5<s3 && s5<s4)
+                {
+                    console.log("s5 is min=",s5)
+
+                }
+                let sum=s1+s2+s3+s4+s5
+                console.log("sum=",sum)
+
+                let per=sum/5;
+                console.log("per=",per)
+
+                if(per>=90)
+                {
+                    console.log("grade= A")
+                }
+                else if(per>=80 && per<=90)
+                {
+                    console.log("grade= B")
+
+                }
+                else if( per >=60 && per<=80)
+                {
+                    console.log("grade= C")
+
+                }
+                else
+                {
+                    console.log("grade= D")
+
+                }
+                }
+                  
             }
+           result (parseInt(prompt("n=")))
+        
             
         </script>
 </body>
