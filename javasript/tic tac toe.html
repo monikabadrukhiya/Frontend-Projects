@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <style>
+        .box{
+            width: 70px;
+            height: 70px;
+            background-color:azure;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            border: 2px solid black;
+            text-align: center;
+            display: flex;;
+            align-items: center;
+            justify-content: center;
+        }
+        .mainbox{
+            width: 250px;
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #b1{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <!-- <button class="box" onclick="tic1()"></button>
+        <button class="box" onclick="tic2()"></button>
+        <button class="box" onclick="tic3()"></button>
+        <button class="box" onclick="tic4()"></button>
+        <button class="box" onclick="tic5()"></button>
+        <button class="box" onclick="tic6()"></button>
+        <button class="box" onclick="tic7()"></button>
+        <button class="box" onclick="tic8()"></button>
+        <button class="box" onclick="tic9()"></button> -->
+        <div class="box" id="b1" onclick="tic1()"></div>
+        <div class="box" id="b2" onclick="tic1()"></div>
+        <div class="box" id="b3" onclick="tic1()"></div>
+        <div class="box" id="b4" onclick="tic1()"></div>
+        <div class="box" id="b5" onclick="tic1()"></div>
+        <div class="box" id="b6" onclick="tic6()"></div>
+        <div class="box" id="b7" onclick="tic7()"></div>
+        <div class="box" id="b8" onclick="tic8()"></div>
+        <div class="box" id="b9" onclick="tic9()"></div>
+    </div>
+  
+    <script>
+        var b1=document.getElementsById("b1").innerHTML='';
+        var b2=document.getElementById("b2").innerHTML='';
+        var b3=document.getElementById("b3").innerHTML='';
+        var b4=document.getElementById("b4").innerHTML='';
+        var b5=document.getElementById("b5").innerHTML='';
+        var b6=document.getElementById("b6").innerHTML='';
+        var b7=document.getElementById("b7").innerHTML='';
+        var b8=document.getElementById("b8").innerHTML='';
+        var b8=document.getElementById("b9").innerHTML='';
+
+
+        let count=0;
+        
+        function tic1()
+        {
+            if(b1=='')
+            console.log(b1) 
+            {
+                if(count%2==0)
+                {
+                    document.getElementById("b1").innerHTML="x";
+                }
+                else
+                {
+                    document.getElementById("b1").innerHTML="0";
+                }
+            count++;
+            }
+        }
+        function tic2()
+        {
+            if(b2=='')
+            {
+                if(count%2==0)
+                {
+                console.log("tic2=",cnt)
+                    document.getElementById("b2").innerHTML="x";
+                }
+                else
+                {
+                    document.getElementById("b2").innerHTML="0";
+                    
+                }
+            }
+            count++;
+        }
+    </script>
+</body>
+</html>
