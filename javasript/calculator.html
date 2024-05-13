@@ -13,36 +13,35 @@
         {
             if(sign=='+')
             {
-                result=a+b
+                result  =a+b
                 //  document.write("sum="+ sum +'<br>')
                 // console.log("sum=",sum);
-                    return result;
             }
             else if(sign=='-')
             {
                 result=a-b
                 // document.write("minus="+ minus +'<br>')
                 // console.log("minus=",minus);
-                    return result;
+                
                 
             }
             else if(sign=='*')
             {
                 result=a*b
                 // document.write("multi="+ multi +'<br>')
-                // console.log("multi",multi);
-                return result;
+                // console.log("multi",multi)
             }
             else if(sign=='/')
             {
                 result=a/b
                 // document.write("division="+ division +'<br>')
                 // console.log("div=",division);
-                    return result;
+                
             }
             else{
                 console.log("go back");
             }
+            return result
         }
         cal(parseInt(prompt('a=')),prompt('+,-.*,/'),parseInt(prompt('b=')))
         let results=console.log( "result=",result);

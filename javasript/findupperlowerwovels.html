@@ -41,14 +41,32 @@
 
     function coutchar(str)
     {
+        document.write(str);
         let vowelschar="AIOUEaeoui"
+        let space=" ";
+        let digitnum=parseInt('1234567890')
         let upper=0;
           let lower=0;
-          let vowels=0
+          let vowels=0;
+          let totalchar=0;
+        let spacecount=0;
+        let digit=0;
           for (let i = 0; i < str.length; i++)
            {
             const el = str[i];
-            if(el==el.toUpperCase())
+            if(el.length)
+            {
+                totalchar++;
+            } 
+            if(el==space)
+            {
+                spacecount++;
+            } 
+            if(el=digitnum)
+            {
+                digit++;
+            }
+            if(el==el.toUpperCase() && el!=space && el!=digitnum)
             {
                 upper++;
             }
@@ -59,19 +77,19 @@
             if(vowelschar.includes(el))
             {
                 vowels++;
-            }   
+            } 
+           
           }
         return{
+            totalchar,
             upper,
             lower,
             vowels,
+            spacecount,
+            digitnum,
         }
     }
     console.log(coutchar(prompt("Enter string=")));
-
-
-
-    
     </script>
 </body>
 </html>
