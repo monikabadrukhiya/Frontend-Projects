@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 700px;
+            height:400px ;
+        }
+    </style>
+</head>
+<body>
+    <img id="slider" src="https://images.pexels.com/photos/458976/pexels-photo-458976.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    <button onclick="nextbtn()">next</button>
+    <button onclick="prevbtn()">prev</button>
+    <script>
+        let link1 = "https://images.pexels.com/photos/458976/pexels-photo-458976.jpeg?auto=compress&cs=tinysrgb&w=600"
+        let link2= "https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=600"
+        let link3="https://images.pexels.com/photos/689784/pexels-photo-689784.jpeg?auto=compress&cs=tinysrgb&w=600"
+        let link4="https://images.pexels.com/photos/70069/pexels-photo-70069.jpeg?auto=compress&cs=tinysrgb&w=600"
+        let link5="https://images.pexels.com/photos/669015/pexels-photo-669015.jpeg?auto=compress&cs=tinysrgb&w=600"
+        let arr=[link1,link2,link3,link4,link5]
+        let num=0;
+        let time= 2;
+
+    
+    // next image
+    function nextbtn()
+    {
+        // console.log(num)
+        // document.getElementsByTagName("img")[0].setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD-pp0GxNxSQVDgzkK6VXhJgtbHabF5rUUcQ&s")
+        if(num<arr.length)
+        {
+            document.getElementById("slider").src=arr[num]
+            num++
+        }
+        else
+        {
+            num=0;
+        }
+    } 
+    //privios image
+    function prevbtn()
+    {
+        num--;
+        if (num<0)
+        {
+            num = 4
+        }
+        document.getElementById("slider").src=arr[num]
+    }
+//timer for image
+    function timer()
+    {   
+        if(num<arr.length)
+        {
+        document.getElementById("slider").src=arr[num];
+            num++;
+        }
+        else
+        {
+            num=0
+        }
+    }
+    setInterval("timer()",time *1000)
+    </script>
+</body>
+</html>
