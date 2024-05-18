@@ -10,8 +10,17 @@
                 <tr >
                  <td><input id="addname" type="text" placeholder="Name"></td>
                 <td><input  type="number" name="number" id="addnum" placeholder="Number"></td> 
+                <td><input  type="number" name="age" id="addage" placeholder="age"></td> 
+                <td><input type="date" name="Dob" id="adddob"placeholder="DOB"></td>
                   <td><input  type="email" name="email" id="addemail" placeholder="Email"></td>
                   <td><input  type="password" name="password" id="addpass" placeholder="Passoword"></td>
+               <td> <select name="" id="addcity"placeholder="city" >
+                    <option value="Surat">Surat</option>
+                    <option value="Rajkot">Rajkot</option>
+                    <option value="Hydrabad">Hydrabad</option>
+                    <option value="Bhavanagar">Bhavanagar</option>
+                  </select>
+                </td> 
                    <td> <button  onclick="Enterinfo()">add</button></td>
                 </tr>
             </table>    
@@ -21,23 +30,41 @@
            
             let name=document.getElementById("addname").value
              let num=document.getElementById("addnum").value
+             let age=document.getElementById("addage").value
+             let dob=document.getElementById("adddob").value
              let email=document.getElementById("addemail").value
              let password=document.getElementById("addpass").value
-             if(!name || !num || !email || !password )
+             let city=document.getElementById("addcity").value 
+             console.log(city)
+             console.log("1")
+             if(!name || !num || !age || !dob|| !email || !password|| !city)
             {
                 alert("Input reruired")
+                console.log(name)
+                console.log(num)
+                console.log(age)
+                console.log(dob)
+                console.log(email)
+                console.log(password)
+                console.log(city)
                 return
             }
              document.getElementById("addtext").innerHTML+=`<tr>
                                                            <td> ${name}</td>
-                                                           <td> ${(num)}</td>
-                                                             <td> ${email}</td>
+                                                           <td> ${num}</td>
+                                                           <td> ${age}</td>
+                                                           <td> ${dob}</td>
+                                                            <td> ${email}</td>
                                                             <td> ${password}</td>
+                                                            <td> ${city}</td>
                                                             <tr>`
              document.getElementById("addname").value="";
              document.getElementById("addnum").value="";
+             document.getElementById("addage").value="";
+             document.getElementById("adddob").value="";
              document.getElementById("addemail").value="";
             document.getElementById("addpass").value="";
+            document.getElementById("addcity").value="";
         }
     </script>
 </body>
