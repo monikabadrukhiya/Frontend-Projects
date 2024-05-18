@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>imgslider</title>
     <style>
         img{
             width: 700px;
@@ -31,40 +31,31 @@
     {
         // console.log(num)
         // document.getElementsByTagName("img")[0].setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD-pp0GxNxSQVDgzkK6VXhJgtbHabF5rUUcQ&s")
-        if(num<arr.length)
-        {
-            document.getElementById("slider").src=arr[num]
-            num++
-        }
-        else
+        num++
+        if(num==arr.length)
         {
             num=0;
         }
+        document.getElementById("slider").setAttribute("src",arr[num])
     } 
+    // setInterval("timer()",time *1000)
+
     //privios image
     function prevbtn()
     {
         num--;
-        if (num<0)
+        if (num==-1)
         {
-            num = 4
+            num = arr.length-1
         }
-        document.getElementById("slider").src=arr[num]
+        document.getElementById("slider").setAttribute("src",arr[num])
+
     }
 //timer for image
-    function timer()
-    {   
-        if(num<arr.length)
-        {
-        document.getElementById("slider").src=arr[num];
-            num++;
-        }
-        else
-        {
-            num=0
-        }
-    }
-    setInterval("timer()",time *1000)
+    setInterval(function(){
+        nextbtn();
+        prevbtn();
+    }, 3000);
     </script>
 </body>
 </html>

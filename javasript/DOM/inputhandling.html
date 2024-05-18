@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputgandling</title>
+</head>
+<body>
+    <input id="addtext" type="text">
+    <button onclick="addtext()">add</button>
+    <ul id="listbox">
+        <li>surat</li>
+        <li>Rajkot</li>
+    </ul>
+    <script>
+        function addtext()
+        {
+        let value =document.getElementById("addtext").value
+
+            document.getElementById("listbox").innerHTML+=`<li>${value}</ul>`
+                document.getElementById("addtext").value=""
+        }
+    </script>
+</body>
+
+</html>

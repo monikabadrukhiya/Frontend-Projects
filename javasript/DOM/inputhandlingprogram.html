@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputpragram</title>
+</head>
+<body>
+            <table border="2px"  id="addtext">
+                <tr >
+                 <td><input id="addname" type="text" placeholder="Name"></td>
+                <td><input  type="number" name="number" id="addnum" placeholder="Number"></td> 
+                  <td><input  type="email" name="email" id="addemail" placeholder="Email"></td>
+                  <td><input  type="password" name="password" id="addpass" placeholder="Passoword"></td>
+                   <td> <button  onclick="Enterinfo()">add</button></td>
+                </tr>
+            </table>    
+    <script>
+        function Enterinfo()
+        {
+           
+            let name=document.getElementById("addname").value
+             let num=document.getElementById("addnum").value
+             let email=document.getElementById("addemail").value
+             let password=document.getElementById("addpass").value
+             if(!name || !num || !email || !password )
+            {
+                alert("Input reruired")
+                return
+            }
+             document.getElementById("addtext").innerHTML+=`<tr>
+                                                           <td> ${name}</td>
+                                                           <td> ${(num)}</td>
+                                                             <td> ${email}</td>
+                                                            <td> ${password}</td>
+                                                            <tr>`
+             document.getElementById("addname").value="";
+             document.getElementById("addnum").value="";
+             document.getElementById("addemail").value="";
+            document.getElementById("addpass").value="";
+        }
+    </script>
+</body>
+</html>
