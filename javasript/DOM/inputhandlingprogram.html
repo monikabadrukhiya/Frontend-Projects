@@ -14,7 +14,8 @@
                 <td><input type="date" name="Dob" id="adddob"placeholder="DOB"></td>
                   <td><input  type="email" name="email" id="addemail" placeholder="Email"></td>
                   <td><input  type="password" name="password" id="addpass" placeholder="Passoword"></td>
-               <td> <select name="" id="addcity"placeholder="city" >
+               <td> <select name="" id="addcity" >
+                <option value="Select City">Select City</option>
                     <option value="Surat">Surat</option>
                     <option value="Rajkot">Rajkot</option>
                     <option value="Hydrabad">Hydrabad</option>
@@ -35,11 +36,10 @@
              let email=document.getElementById("addemail").value
              let password=document.getElementById("addpass").value
              let city=document.getElementById("addcity").value 
-             console.log(city)
-             console.log("1")
+
              if(!name || !num || !age || !dob|| !email || !password|| !city)
             {
-                alert("Input reruired")
+                alert(" All Input Reruired")
                 console.log(name)
                 console.log(num)
                 console.log(age)
