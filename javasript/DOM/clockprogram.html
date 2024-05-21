@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <style>
+      div{
+        width: 100px;
+        height: 50px;
+        border-width: 2px;
+        border-color: black;
+      }
+    </style>
+</head> 
 <body>
-    <h2 id="clock">00:00:00</h2>
+    <div><h2 id="clock">00:00:00</h2></div>
     <button onclick="starttime()">start</button>
     <button onclick="stoptime()">stop</button>
    <script>
@@ -28,6 +36,8 @@
   //       min=0
   //     }
   //   }, 1000);
+
+  //==================================================
 
   let timer=null
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Function</title>
+</head>
+<body>
+    <script>
+        // 1. arrow Function=> in arrow function dont need function keyword,return keywod
+            // and curly bracket
+
+        const total=(n1,n2)=>{
+            return n1+n2
+        }
+        const total1=(n1,n2)=>n1+n2
+        console.log(total(10,30));
+        console.log(total1(50,30));
+
+        //2. Anonymous Function=> function does not have any Nameuse only function keywords
+                //without the function name
+
+            const data={
+                name: "neel",
+                sum: function()
+                {
+                    return 20;
+                }
+            }
+            console.log(data.sum());
+
+        // 3. Immediatly Invoked Function=> IIf fun that runs in the Momment called IIf
+        ( function ()
+        {
+          console.log("Welcome to Surat")
+        })();
+
+
+        //4.closures function=>function creat inside the function fun  this is called 
+                    //closures fun
+            function sum()
+            {
+                let num=10;
+                const text=()=>{
+                    let abc=10;
+                }
+            }
+            console.log(sum());
+
+        //5. callback function=>this function passed as an argument to another function
+        //this techinuqe allows to function call to another function
+
+        function sum(x,y)
+        {
+            function total()
+            {
+                return x+y
+            }
+            return total()
+        }
+        console.log(sum(50,40));
+
+        //6. Map Function=> map fun asame as callback fun
+        // passed 3 perameter 1.value 2.index 3. array
+
+        let num=[10,20,30,40,50]
+
+        num.map(function(num,inx)
+        {
+            console.log(num,inx)
+        })  
+
+        //object with arow function using this key word
+
+        const fname = {
+            name:"monika",
+            lname:"badrukhiya",
+             fullname:()=>{
+                return this.name+" "+ this.lname
+             }
+        }
+        console.log(fname.fullname());
+
+
+        // normal function using this keywod
+
+        const name = {
+            name:"monika",
+            lname:"badrukhiya",
+             fullname: function(){
+                return this.name+" "+ this.lname
+             }
+        }
+        console.log(name.fullname());
+
+    </script>
+</body>
+</html>
