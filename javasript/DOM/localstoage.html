@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <table border="1px" id="addtext">
+        <tr>
+            <td><input type="text" id="addname" placeholder="Name"></td>
+            <td><input type="number" name="" id="addnum"placeholder="number"></td>
+            <td><input type="number" name="" id="addage"placeholder="age"></td>
+            <td><input type="date" name="" id="adddob"placeholder="DOB"></td>
+            <td><button onclick="Enterdata()">add</button></td>
+        </tr>
+    </table>
+    <script>
+
+    let data=[];
+
+    (function()
+        {
+            let localjsondata=localStorage.getItem("data")
+            let localdata=JSON.parse(localjsondata)
+            data=localdata
+            // console.log(localdata)
+            // for (let i =0; i< localdata.length; i++) 
+            // {
+            //     document.getElementById("addtext").innerHTML +=`  <tr>
+            //                                         <td>${localdata[i].name}</td>
+            //                                         <td>${localdata[i].num}</td>
+            //                                         <td>${localdata[i].age}</td>
+            //                                         <td>${localdata[i].dob}</td>                                      
+            //                                     </tr>`
+            // }          
+            localdata.map((el)=>
+            {
+                document.getElementById("addtext").innerHTML +=`  <tr>
+                                                    <td>${el.name}</td>
+                                                    <td>${el.num}</td>
+                                                    <td>${el.age}</td>
+                                                    <td>${el.dob}</td>
+                                                    
+                                                </tr>`
+            })
+        })()
+        function Enterdata()
+        {
+           
+            let name=document.getElementById("addname").value
+            let num=document.getElementById("addnum").value
+            let age=document.getElementById("addage").value
+            let dob=document.getElementById("adddob").value
+
+
+            document.getElementById("addtext").innerHTML +=`  <tr>
+                                                        <td>${name}</td>
+                                                        <td>${num}</td>
+                                                        <td>${age}</td>
+                                                        <td>${dob}</td>
+                                                        
+                                                    </tr>`
+
+                 document.getElementById("addname").value=""
+                 document.getElementById("addnum").value=""
+                 document.getElementById("addage").value=""
+                 document.getElementById("adddob").value=""
+
+                //  console.log({name,num,age,dob});
+
+                 data.push({name,num,age,dob})
+
+                 localStorage.setItem("data",JSON.stringify(data))
+        }
+    </script>
+</body>
+</html>
