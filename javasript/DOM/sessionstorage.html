@@ -21,19 +21,19 @@
         {
                 let localjsondata=sessionStorage.getItem("data")
                 let localdata=JSON.parse(localjsondata)
-                data=localdata
-
-                localdata.map((el)=>
+                if(localdata && localdata.length)
                 {
-                    document.getElementById("addtext").innerHTML +=`  <tr>
-                                                        <td>${el.name}</td>
-                                                        <td>${el.num}</td>
-                                                        <td>${el.age}</td>
-                                                        <td>${el.dob}</td>
-                                                        
-                                                    </tr>`
-                })
-              
+                     data=localdata
+                     localdata.map((el)=>
+                    {
+                        document.getElementById("addtext").innerHTML +=`  <tr>
+                                                            <td>${el.name}</td>
+                                                            <td>${el.num}</td>
+                                                            <td>${el.age}</td>
+                                                            <td>${el.dob}</td>     
+                                                        </tr>`
+                    })
+                }
         })()
           function Enterdata()
         {
@@ -58,7 +58,8 @@
                  document.getElementById("adddob").value=""
 
                  data.push(name,num,age,dob)
-                 sessionStorage.getItem("data",JSON.stringify(data))
+                 sessionStorage.setItem("data",JSON.stringify(data))
+
        }
     </script>
 </body>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <style>
+        .btnbox{
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .btnbox button{
+            width: 100px;
+            height: 100px;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        #winner{
+            margin: 10px;    
+            width: 100px;
+            height: 50px;
+            background-color: aliceblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .restart{
+            /* margin: 20px; */
+            width: 100px;
+            height: 50px;
+            background-color: aliceblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #draw{
+            width: 100px;
+            height: 50px;
+            background-color: aliceblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* only for 4th event */
+        .disabled{
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+            <h1>Tic Tac Toe</h1>
+    <div class="btnbox">
+        <button class="btns" onclick="btnclick(0)"></button>
+        <button  class="btns"onclick="btnclick(1)"></button>
+        <button class="btns" onclick="btnclick(2)"></button>
+        <button class="btns" onclick="btnclick(3)"></button>
+        <button class="btns" onclick="btnclick(4)"></button>
+        <button class="btns" onclick="btnclick(5)"></button>
+        <button class="btns" onclick="btnclick(6)"></button>
+        <button class="btns" onclick="btnclick(7)"></button>
+        <button  class="btns"onclick="btnclick(8)"></button>
+    </div>
+    <button id="winner"></button>
+    <button id="draw"></button>
+    <button class="restart" onclick="restart()">RESTART</button>
+   <script>
+    let tic="X"
+     function btnclick(inx)
+     {
+       
+       let currentval= document.getElementsByTagName("button")[inx].innerHTML
+
+    //========================= 1 .Method============================
+    //    if(!currentval)
+    //    {
+    //         document.getElementsByTagName("button")[inx].innerHTML=tic
+    //         tic=(tic=="X")? "O": "X"
+    //    }
+
+    //======================== 2.method=================================
+        // document.getElementsByTagName("button")[inx].innerHTML=tic
+        //    tic=(tic=="X")? "O": "X"
+
+        //  document.getElementsByTagName("button")[inx].setAttribute("disabled","true")
+
+    // ===========================3.method=============================
+    // document.getElementsByTagName("button")[inx].innerHTML=tic
+    // tic=(tic=="X")?"O" :"X"
+
+    // document.getElementsByTagName("button")[inx].style.pointerEvents="none"
+
+ //============================4.method===================================
+    document.getElementsByTagName("button")[inx].innerHTML=tic
+    tic=(tic=="X")?"O":"X"
+
+    document.getElementsByTagName("button")[inx].classList.add("disabled")
+
+       checkwin()
+     }
+     function checkwin()
+     {
+        let btn1=document.getElementsByTagName("button")[0].innerHTML
+        let btn2=document.getElementsByTagName("button")[1].innerHTML
+        let btn3=document.getElementsByTagName("button")[2].innerHTML
+        let btn4=document.getElementsByTagName("button")[3].innerHTML
+        let btn5=document.getElementsByTagName("button")[4].innerHTML
+        let btn6=document.getElementsByTagName("button")[5].innerHTML
+        let btn7=document.getElementsByTagName("button")[6].innerHTML
+        let btn8=document.getElementsByTagName("button")[7].innerHTML
+        let btn9=document.getElementsByTagName("button")[8].innerHTML
+
+        //====================== X winner===========================
+        if(btn1=="X" && btn2=="X" && btn3=="X")
+        {
+            document.getElementById("winner").innerHTML="X win"
+        }
+        if(btn4=="X" && btn5=="X" && btn6=="X")
+        {
+            document.getElementById("winner").innerHTML="X win"
+        }
+        if(btn7=="X" && btn8=="X" && btn9=="X")
+        {
+            document.getElementById("winner").innerHTML="X win"
+        }
+        if(btn1=="X" && btn4=="X" && btn7=="X")
+        {
+            document.getElementById("winner").innerHTML="X win"
+        }
+        if(btn2=="X" && btn5=="X" && btn5=="X")
+        {
+            document.getElementById("winner").innerHTML="X win"
+        }
+        if(btn3=="X" && btn6=="X" && btn9=="X")
+        {
+            document.getElementById("winner").innerHTML="X win"
+        }
+        if(btn1=="X" && btn5=="X" && btn9=="X")
+        {
+            document.getElementById("winner").innerHTML="X win"
+        }
+        if(btn3=="X" && btn5=="X" && btn7=="X")
+        {
+            document.getElementById("winner").innerHTML="X win"
+        }
+
+        // ===================O winner======================
+        if(btn1=="O" && btn2=="O" && btn3=="O")
+        {
+            document.getElementById("winner").innerHTML="Owin"
+        }
+        if(btn4=="O" && btn5=="O" && btn6=="O")
+        {
+            document.getElementById("winner").innerHTML="O win"
+        }
+        if(btn7=="O" && btn8=="O" && btn9=="O")
+        {
+            document.getElementById("winner").innerHTML="O win"
+        }
+        if(btn1=="O" && btn4=="O" && btn7=="O")
+        {
+            document.getElementById("winner").innerHTML="O win"
+        }
+        if(btn2=="O" && btn5=="O" && btn7=="O")
+        {
+            document.getElementById("winner").innerHTML="O win"
+        }
+        if(btn3=="O" && btn6=="O" && btn9=="O")
+        {
+            document.getElementById("winner").innerHTML="O win"
+        }
+        if(btn1=="O" && btn5=="O" && btn9=="O")
+        {
+            document.getElementById("winner").innerHTML="O win"
+        }
+        if(btn3=="O" && btn5=="O" && btn7=="O")
+        {
+            document.getElementById("winner").innerHTML="O win"
+        }
+
+      let button=document.getElementsByClassName("btns")
+        for(let i=0;i<=button.length;i++)
+        {
+            button[i].classList.add("disabled")
+        }
+
+        if(btn1 && btn2 && btn3 && btn4 && btn5 && btn6 && btn7 && btn8 && btn9 !="")
+        {
+            document.getElementById("draw").innerHTML="DRAW"
+            document.getElementById("draw").style.backgroundColor="green"
+        }
+
+     }
+     function restart()
+     {
+        let btn1=document.getElementsByTagName("button")[0].innerHTML=""
+        let btn2=document.getElementsByTagName("button")[1].innerHTML=""
+        let btn3=document.getElementsByTagName("button")[2].innerHTML=""
+        let btn4=document.getElementsByTagName("button")[3].innerHTML=""
+        let btn5=document.getElementsByTagName("button")[4].innerHTML=""
+        let btn6=document.getElementsByTagName("button")[5].innerHTML=""
+        let btn7=document.getElementsByTagName("button")[6].innerHTML=""
+        let btn8=document.getElementsByTagName("button")[7].innerHTML=""
+        let btn9=document.getElementsByTagName("button")[8].innerHTML=""
+
+        document.getElementById("winner").innerHTML=" "
+        document.getElementById("draw").innerHTML=" "
+        document.getElementById("draw").style.backgroundColor="aliceblue"
+
+     }
+
+   </script>
+</body>
+</html>

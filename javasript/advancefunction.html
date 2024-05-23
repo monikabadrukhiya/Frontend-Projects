@@ -38,14 +38,28 @@
 
         //4.closures function=>function creat inside the function fun  this is called 
                     //closures fun
-            function sum()
+            //example:1
+            function init()
+            {
+                var name="badrukhhiya"
+                function displayname()
+                {
+                    console.log("name=",name)
+                }
+                displayname()
+            }
+            init();
+
+            //example :2
+            function totals()
             {
                 let num=10;
-                const text=()=>{
-                    let abc=10;
+                function text(){
+                    let text=20
                 }
+               text()
             }
-            console.log(sum());
+           console.log( totals());
 
         //5. callback function=>this function passed as an argument to another function
         //this techinuqe allows to function call to another function
