@@ -30,16 +30,8 @@
             height: 50px;
             background-color: aliceblue;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 18px;
         }
-        #draw{
-            width: 100px;
-            height: 50px;
-            background-color: aliceblue;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
         /* only for 4th event */
         .disabled{
             pointer-events: none;
@@ -60,7 +52,6 @@
         <button  class="btns"onclick="btnclick(8)"></button>
     </div>
     <button id="winner"></button>
-    <button id="draw"></button>
     <button class="restart" onclick="restart()">RESTART</button>
    <script>
     let tic="X"
@@ -70,11 +61,11 @@
        let currentval= document.getElementsByTagName("button")[inx].innerHTML
 
     //========================= 1 .Method============================
-    //    if(!currentval)
-    //    {
-    //         document.getElementsByTagName("button")[inx].innerHTML=tic
-    //         tic=(tic=="X")? "O": "X"
-    //    }
+       if(!currentval)
+       {
+            document.getElementsByTagName("button")[inx].innerHTML=tic
+            tic=(tic=="X")? "O": "X"
+       }
 
     //======================== 2.method=================================
         // document.getElementsByTagName("button")[inx].innerHTML=tic
@@ -89,10 +80,10 @@
     // document.getElementsByTagName("button")[inx].style.pointerEvents="none"
 
  //============================4.method===================================
-    document.getElementsByTagName("button")[inx].innerHTML=tic
-    tic=(tic=="X")?"O":"X"
+    // document.getElementsByTagName("button")[inx].innerHTML=tic
+    // tic=(tic=="X")?"O":"X"
 
-    document.getElementsByTagName("button")[inx].classList.add("disabled")
+    // document.getElementsByTagName("button")[inx].classList.add("disabled")
 
        checkwin()
      }
@@ -125,7 +116,7 @@
         {
             document.getElementById("winner").innerHTML="X win"
         }
-        if(btn2=="X" && btn5=="X" && btn5=="X")
+        if(btn2=="X" && btn5=="X" && btn8=="X")
         {
             document.getElementById("winner").innerHTML="X win"
         }
@@ -175,18 +166,16 @@
         {
             document.getElementById("winner").innerHTML="O win"
         }
-
-      let button=document.getElementsByClassName("btns")
-        for(let i=0;i<=button.length;i++)
-        {
-            button[i].classList.add("disabled")
-        }
-
-        if(btn1 && btn2 && btn3 && btn4 && btn5 && btn6 && btn7 && btn8 && btn9 !="")
-        {
-            document.getElementById("draw").innerHTML="DRAW"
-            document.getElementById("draw").style.backgroundColor="green"
-        }
+        // let btn=document.getElementsByClassName("btns")
+        // if(document.getElementById("winner").innerHTML!="")
+        // {
+        //     console.log("check")
+        //     for(let i=0;i<=btn.length;i++)
+        //     {
+        //         btn[i].style.pointerEvents="none"
+        //         console.log(btn[i])
+        //     }
+        // }
 
      }
      function restart()
@@ -201,10 +190,15 @@
         let btn8=document.getElementsByTagName("button")[7].innerHTML=""
         let btn9=document.getElementsByTagName("button")[8].innerHTML=""
 
-        document.getElementById("winner").innerHTML=" "
-        document.getElementById("draw").innerHTML=" "
-        document.getElementById("draw").style.backgroundColor="aliceblue"
+        // let button=document.getElementsByClassName("btns")
+        // for(let i=0;i<=button.length;i++)
+        // {
+        //     button[i].innerHTML=""
+        //     button[i].classList.remove("disabled")
+        // }
 
+        document.getElementById("winner").innerHTML=" "
+        tic="X"
      }
 
    </script>
