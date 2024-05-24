@@ -13,32 +13,72 @@
 
 //1.length=>stringni length return kare
         console.log(name.length);
+
+//2.charAt=> passed index character can be return
         console.log(name.charAt(10));
+
+//3.charCodeAt=> return code to passed position
         console.log(name.charCodeAt(6));
+
+//4.at=> return character to passed index
         console.log(name.at(10));
+
+//5.slice=> return string between pass index & position
         console.log(name.slice(7,20));
         console.log(name.slice(7));
+
+//6.substring=>return char between pass index & position
         console.log(name.substring(8,12));
+
+//7.substr=>return string between pass index & position
         console.log(name.substr(1,7));
+
+//8.toUpperCase=>pass string covert to uppercase
         console.log(name.toUpperCase());
+
+//9.toLowerCase=> pass string convert to lowercase
         console.log(name.toLowerCase());
+
+//10.concat=> concat two string
         console.log(name.concat(" _",name1));
+
+//11.trim=> remove both side space into pass string
         console.log(name.trim());
+
+//12.trimStart=>remove space into string starting 
         console.log(name.trimStart());
+
+//13.trimEnd=>remove space ito string ending part
         console.log(name.trimEnd());
        // console.log(name.padStart(4));
        // console.log(name.padEnd(4));
+
+//14.repeat=>   string repeat equal passed value
        console.log(name.repeat(2));
+    
+//15.replace=> in string first string replace with second string
        console.log(name.replace("Monika","Panvi"));
+
+//16.replaceAll=> in srting all pass first string replace with second string
      console.log(name.replaceAll("Khushal","k."));
+
+//17.includes=> use for in string pass char can ben include or not,ture & false
      console.log(name.includes("K"));
+
+//18.startsWith=> string start with pass char or not
       console.log(name.startsWith("M"));
+
+//19.endsWith=> string end with pass char or not
      console.log(name.endsWith("M"));
+
+//20.indexOf=> pass char index can be return
      console.log(name1.indexOf("B"));
+    
+//21.join => pass array join with pass char.
   let text1=["a","b","c","d","e"]
     console.log(text1.join("+"));
-let num="happy"
-    console.log(num.slice(1,5));
+
+//22.split =>string split and convert into array
      const text=name2.split("");
      let myarr="";
      for(var i=0;i<=text.length;i++)
