@@ -19,7 +19,7 @@
 
     let data=[];
 
-    (function()
+        (function()
         {
             let localjsondata=localStorage.getItem("data")
             let localdata=JSON.parse(localjsondata)
@@ -67,9 +67,8 @@
                  document.getElementById("addage").value=""
                  document.getElementById("adddob").value=""
 
-                //  console.log({name,num,age,dob});
-
                  data.push({name,num,age,dob})
+                //  console.log(data);
 
                  localStorage.setItem("data",JSON.stringify(data))
         }

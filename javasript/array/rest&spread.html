@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest&spread</title>
+</head>
+<body>
+    <script>
+        let num=[10,20,40,60,50]
+        let data={name:"moni",age:27}
+
+        // console.log([...num]);
+        // console.log({...data});
+
+
+        function sum(name,...nums)
+        {
+            let total=0
+            nums.forEach((num)=>
+            {
+                total+=num
+            })
+            return `my name is ${name}, and i got ${total} marks`
+        }
+      console.log(sum("moni",10,20,30));
+      console.log(sum("moni1",10,20,30,90,50));
+    </script>
+</body>
+</html>
